@@ -1,14 +1,25 @@
 import { useState } from "react";
 import TextInputForm from "./TextInputForm";
+import { useNavigate } from "react-router-dom";
+
 
 function TextInputFormContainer(){
 
    const [inputType,setInputType] = useState("password");
    const [value, setValue] = useState("");
 
+   const navigate = useNavigate();
+
     function handelFormSubmit(event){
         event.preventDefault();
         console.log("Form submitted", value);
+        if(value) {
+            // if we have something in value then we want to go to the paly page 
+            setTimeout(()=>{
+            navigate("/play")
+            },3000)
+        }
+        
     }
 
     function handlelTextInputChange(event) {
