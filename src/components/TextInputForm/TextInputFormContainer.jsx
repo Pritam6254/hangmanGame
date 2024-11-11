@@ -15,9 +15,9 @@ function TextInputFormContainer(){
         console.log("Form submitted", value);
         if(value) {
             // if we have something in value then we want to go to the paly page 
-            setTimeout(()=>{
-            navigate("/play")
-            },3000)
+            
+            navigate(`/play`,{state: {wordSelected: value}})
+            
         }
         
     }
@@ -35,7 +35,7 @@ function TextInputFormContainer(){
         }else {
             setInputType("password")
         }
-        
+        console.log(inputType)
     }
 
     return (

@@ -24,7 +24,7 @@ function TextInputForm({inputType, handelFormSubmit,handlelTextInputChange,handl
 
             <div>
                 <Button
-                    type ="Submit"
+                    type="submit"
                     styleType="primary"
                     text="Submit"
                 />
